@@ -1,0 +1,162 @@
+.booking {
+  padding: 120px 24px;
+  background: #f8f8f8;
+}
+
+.booking__inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+
+.booking__content {
+  max-width: 480px;
+}
+
+.booking__eyebrow {
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #666;
+  margin-bottom: 24px;
+  font-weight: 500;
+}
+
+.booking__title {
+  font-family: var(--font-serif);
+  font-size: 48px;
+  font-weight: 300;
+  line-height: 1.1;
+  color: #111;
+  margin-bottom: 24px;
+  letter-spacing: -0.01em;
+}
+
+.booking__sub {
+  font-size: 15px;
+  color: #555;
+  line-height: 1.7;
+  margin-bottom: 40px;
+}
+
+.booking__contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.booking__info-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  font-size: 16px;
+  color: #111;
+  font-weight: 500;
+}
+
+.booking__info-icon {
+  color: #25D366; /* WhatsApp brand color */
+}
+
+.booking__form-wrapper {
+  background: #fff;
+  padding: 48px;
+  border-radius: 2px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.04);
+}
+
+.booking__form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.booking__form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.booking__label {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  color: #111;
+  text-transform: uppercase;
+}
+
+.booking__input {
+  width: 100%;
+  padding: 16px;
+  background: #fdfdfd;
+  border: 1px solid #e0e0e0;
+  border-radius: 2px;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  color: #111;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.booking__input:focus {
+  outline: none;
+  border-color: #111;
+  box-shadow: 0 0 0 1px #111;
+}
+
+.booking__input::placeholder {
+  color: #aaa;
+}
+
+.booking__select {
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23111111%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E");
+  background-repeat: no-repeat;
+  background-position: right 16px top 50%;
+  background-size: 10px auto;
+}
+
+.booking__textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.booking__submit {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  background: #25D366; /* WhatsApp brand color */
+  color: #fff;
+  border: none;
+  padding: 18px;
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  cursor: pointer;
+  border-radius: 2px;
+  transition: background 0.2s, transform 0.2s;
+  margin-top: 8px;
+}
+
+.booking__submit:hover {
+  background: #20BA59;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 900px) {
+  .booking__inner {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+  .booking__title {
+    font-size: 36px;
+  }
+  .booking__form-wrapper {
+    padding: 32px 24px;
+  }
+}

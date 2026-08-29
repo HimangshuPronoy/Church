@@ -1,31 +1,38 @@
 .hero {
   position: relative;
-  height: 1000vh;
+  height: calc(100vh - 52px); /* Minus navbar height */
   background: #000;
+  overflow: hidden;
 }
 
-.hero__sticky {
-  position: sticky;
-  top: 0;
-  height: 100vh;
-  overflow: hidden;
+.hero__carousel {
+  position: relative;
+  width: 100%;
+  height: 100%;
   display: flex;
   align-items: center;
 }
 
-.hero__canvas {
+.hero__video {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: 1;
   object-fit: cover;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  z-index: 1;
+}
+
+.hero__video.active {
+  opacity: 1;
+  z-index: 2;
 }
 
 .hero__content-overlay {
   position: relative;
-  z-index: 2;
+  z-index: 3;
   padding: 64px 56px 64px 10%;
   max-width: 600px;
   color: #fff;
@@ -34,6 +41,41 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  pointer-events: none; /* Let clicks pass through to carousel nav */
+}
+
+.hero__content-overlay > * {
+  pointer-events: auto; /* Re-enable clicks on content */
+}
+
+.hero__carousel-nav {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+  display: flex;
+  gap: 12px;
+}
+
+.hero__carousel-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.4);
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  padding: 0;
+}
+
+.hero__carousel-dot:hover {
+  background: rgba(255, 255, 255, 0.8);
+}
+
+.hero__carousel-dot.active {
+  background: #fff;
+  transform: scale(1.2);
 }
 
 .hero__eyebrow {
@@ -75,6 +117,7 @@
   padding: 16px 36px;
   transition: background 0.25s;
   align-self: flex-start;
+  text-decoration: none;
 }
 
 .hero__cta:hover {
@@ -143,6 +186,7 @@
   border-bottom: 1px solid rgba(255,255,255,0.5);
   padding-bottom: 2px;
   transition: border-color 0.2s;
+  text-decoration: none;
 }
 
 .hero__tile-link--dark {
@@ -154,18 +198,16 @@
 }
 
 @media (max-width: 900px) {
-  .hero__main {
-    grid-template-columns: 1fr;
-    min-height: auto;
+  .hero {
+    height: calc(100vh - 52px);
   }
-  .hero__content {
+  .hero__content-overlay {
     padding: 48px 24px;
+    background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.4) 60%, transparent 100%);
+    justify-content: flex-end;
   }
   .hero__title {
     font-size: 42px;
-  }
-  .hero__image-wrap {
-    height: 380px;
   }
   .hero__tiles {
     grid-template-columns: 1fr;

@@ -15,7 +15,7 @@ export default function Newsletter() {
       <div className="newsletter__inner">
         <div className="newsletter__text">
           <p className="newsletter__eyebrow">Restez Informé</p>
-          <h2 className="newsletter__title">Rejoignez la communauté Oasis Pools</h2>
+          <h2 className="newsletter__title">Rejoignez la communauté Piscine Miroir Concept</h2>
           <p className="newsletter__sub">
             Recevez des offres exclusives, des guides de conception d'aménagement extérieur et de nouvelles inspirations de projets directement dans votre boîte de réception.
           </p>

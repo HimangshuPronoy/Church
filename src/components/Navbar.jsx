@@ -1,44 +1,31 @@
 import { useState } from 'react';
-import { Search, ShoppingBag, User, Menu, X, ChevronDown } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { Menu, X } from 'lucide-react';
 import './Navbar.css';
 
 const navItems = [
-  {
-    label: 'Piscines Sur Mesure',
-    sub: ['Piscines à Débordement', 'Piscines Géométriques', 'Piscines Libres', 'Mini-piscines', 'Voir Tout'],
-  },
-  {
-    label: 'Spas & Bains à Remous',
-    sub: ['Spas Intégrés', 'Spas Indépendants', 'Fonctionnalités Sur Mesure', 'Voir Tout'],
-  },
-  {
-    label: 'Rénovation',
-    sub: ['Revêtement de Piscine', 'Carrelage & Margelles', 'Mise à Niveau des Équipements', 'Voir Tout'],
-  },
-  {
-    label: 'Aménagement Extérieur',
-    sub: ['Cuisines d\'Extérieur', 'Braseros', 'Patios & Terrasses', 'Voir Tout'],
-  },
-  {
-    label: 'Galerie',
-    sub: ['Projets Récents', 'Avant & Après', 'Idées de Design', 'Voir Tout'],
-  },
-  {
-    label: 'À Propos',
-    sub: ['Notre Histoire', 'Le Processus', 'L\'Équipe', 'Nous Contacter'],
-  },
+  { label: 'Collections', id: 'collections' },
+  { label: 'Nos Réalisations', id: 'portfolio' },
+  { label: 'Avis', id: 'reviews' },
 ];
-
-const generateLink = (text) => {
-  if (text === 'Voir Tout' || text === 'Galerie') return '/gallery';
-  return `/service/${encodeURIComponent(text.toLowerCase().replace(/\s+/g, '-'))}`;
-};
 
 export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
-  const [activeDropdown, setActiveDropdown] = useState(null);
-  const [mobileExpanded, setMobileExpanded] = useState(null);
+
+  const handleLinkClick = (e, targetId) => {
+    e.preventDefault();
+    setMobileOpen(false);
+    
+    if (targetId) {
+      const element = document.getElementById(targetId);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+        return;
+      }
+    }
+    
+    // Default to top if no ID provided or element not found
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
 
   return (
     <header className="navbar">
@@ -52,51 +39,42 @@ export default function Navbar() {
           {mobileOpen ? <X size={20} /> : <Menu size={20} />}
         </button>
 
-        <Link to="/" className="navbar__logo">
-          <span className="navbar__logo-main">OASIS POOLS</span>
+        <a href="/" className="navbar__logo" onClick={(e) => handleLinkClick(e, null)}>
+          <span className="navbar__logo-main">PISCINE MIROIR CONCEPT</span>
           <span className="navbar__logo-tm">™</span>
-        </Link>
-
-        <div className="navbar__actions">
-          <button className="navbar__action-btn" aria-label="Search">
-            <Search size={18} />
-          </button>
-          <button className="navbar__action-btn" aria-label="Account">
-            <User size={18} />
-          </button>
-          <button className="navbar__action-btn navbar__cart" aria-label="Cart">
-            <ShoppingBag size={18} />
-            <span className="navbar__cart-count">0</span>
-          </button>
-        </div>
+        </a>
+        
+        {/* Intentionally left empty to balance the hamburger icon if needed */}
+        <div></div>
       </div>
 
       {/* Desktop nav */}
       <nav className="navbar__nav">
         {navItems.map((item) => (
-          <div
-            key={item.label}
-            className={`navbar__nav-item ${activeDropdown === item.label ? 'is-active' : ''}`}
-            onMouseEnter={() => setActiveDropdown(item.label)}
-            onMouseLeave={() => setActiveDropdown(null)}
-          >
-            <button className="navbar__nav-btn">
+          <div key={item.label} className="navbar__nav-item">
+            <a 
+              href={`#${item.id}`} 
+              onClick={(e) => handleLinkClick(e, item.id)} 
+              className="navbar__nav-btn"
+            >
               {item.label}
-              <ChevronDown size={12} className="navbar__nav-chevron" />
-            </button>
-            {activeDropdown === item.label && (
-              <div className="navbar__dropdown">
-                {item.sub.map((s) => (
-                  <Link key={s} to={generateLink(s)} className="navbar__dropdown-link">
-                    {s}
-                  </Link>
-                ))}
-              </div>
-            )}
+            </a>
           </div>
         ))}
-        <Link to="/gallery" className="navbar__nav-btn navbar__nav-special">Obtenir un Devis</Link>
-        <Link to="/gallery" className="navbar__nav-btn navbar__nav-special">Centre de Design</Link>
+        <a 
+          href="#booking" 
+          onClick={(e) => handleLinkClick(e, 'booking')} 
+          className="navbar__nav-btn navbar__nav-special"
+        >
+          Obtenir un Devis
+        </a>
+        <a 
+          href="#booking" 
+          onClick={(e) => handleLinkClick(e, 'booking')} 
+          className="navbar__nav-btn navbar__nav-special"
+        >
+          Centre de Design
+        </a>
       </nav>
 
       {/* Mobile menu */}
@@ -104,34 +82,17 @@ export default function Navbar() {
         <div className="navbar__mobile-menu">
           {navItems.map((item) => (
             <div key={item.label} className="navbar__mobile-item">
-              <button
+              <a 
+                href={`#${item.id}`}
                 className="navbar__mobile-btn"
-                onClick={() =>
-                  setMobileExpanded(mobileExpanded === item.label ? null : item.label)
-                }
+                onClick={(e) => handleLinkClick(e, item.id)}
               >
-                <span>{item.label}</span>
-                <ChevronDown
-                  size={14}
-                  className={mobileExpanded === item.label ? 'rotated' : ''}
-                />
-              </button>
-              {mobileExpanded === item.label && (
-                <div className="navbar__mobile-sub">
-                  {item.sub.map((s) => (
-                    <Link key={s} to={generateLink(s)} className="navbar__mobile-sub-link">
-                      {s}
-                    </Link>
-                  ))}
-                </div>
-              )}
+                {item.label}
+              </a>
             </div>
           ))}
-          <Link to="/gallery" className="navbar__mobile-btn">Obtenir un Devis</Link>
-          <Link to="/gallery" className="navbar__mobile-btn">Centre de Design</Link>
-          <div className="navbar__mobile-divider" />
-          <Link to="/gallery" className="navbar__mobile-btn">À Propos</Link>
-          <Link to="/gallery" className="navbar__mobile-btn">Service Client</Link>
+          <a href="#booking" onClick={(e) => handleLinkClick(e, 'booking')} className="navbar__mobile-btn">Obtenir un Devis</a>
+          <a href="#booking" onClick={(e) => handleLinkClick(e, 'booking')} className="navbar__mobile-btn">Centre de Design</a>
         </div>
       )}
     </header>

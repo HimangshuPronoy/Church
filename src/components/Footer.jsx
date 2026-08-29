@@ -19,7 +19,7 @@ const footerLinks = {
     'FAQ',
   ],
   'Entreprise': [
-    'À Propos d\'Oasis Pools',
+    'À Propos de Piscine Miroir Concept',
     'Notre Processus',
     'Témoignages',
     'Prix & Reconnaissances',
@@ -35,11 +35,15 @@ export default function Footer() {
       <div className="footer__main">
         <div className="footer__brand">
           <a href="/" className="footer__logo">
-            OASIS POOLS<sup>™</sup>
+            PISCINE MIROIR CONCEPT<sup>™</sup>
           </a>
           <p className="footer__brand-text">
-            Piscines sur mesure conçues avec précision. Nous pensons que chaque jardin mérite d'être une oasis.
+            Concept de piscines miroir et à débordement. Design et construction générale.
           </p>
+          <div className="footer__contact-info" style={{ marginTop: '16px', color: '#888', fontSize: '13.5px', lineHeight: '1.6' }}>
+            <p>1560 Rte de Quarante Sous<br />78630 Orgeval</p>
+            <p style={{ marginTop: '8px' }}>Tél : 06 78 53 37 52</p>
+          </div>
           <div className="footer__socials">
             <a href="#" aria-label="Instagram" className="footer__social-link">
               <Instagram size={18} />
@@ -74,7 +78,7 @@ export default function Footer() {
       <div className="footer__bottom">
         <div className="footer__bottom-inner">
           <p className="footer__copy">
-            © {new Date().getFullYear()} Oasis Pools™ · Tous droits réservés
+            © {new Date().getFullYear()} Piscine Miroir Concept™ · Tous droits réservés
           </p>
           <div className="footer__payment">
             <span className="footer__payment-label">Nous acceptons :</span>

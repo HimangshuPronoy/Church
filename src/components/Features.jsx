@@ -28,7 +28,7 @@ export default function Features() {
     <section className="features">
       <div className="features__inner">
         <div className="features__header">
-          <p className="features__eyebrow">Pourquoi Oasis Pools</p>
+          <p className="features__eyebrow">Pourquoi Piscine Miroir Concept</p>
           <h2 className="features__title">
             Design époustouflant.<br />Savoir-faire expert.<br />Qualité durable.
           </h2>

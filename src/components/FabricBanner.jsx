@@ -3,14 +3,10 @@ import './FabricBanner.css';
 export default function FabricBanner() {
   return (
     <section className="fabric-banner">
-      <div className="fabric-banner__image-col">
-        <img
-          src="/images/fabric_banner_pool_1786902012159.jpg"
-          alt="Premium pool tile finishes"
-          className="fabric-banner__img"
-        />
-      </div>
-      <div className="fabric-banner__content">
+      <div className="fabric-banner__parallax-bg" style={{ backgroundImage: 'url(/images/nano_freeform_pool.jpg)' }}></div>
+      <div className="fabric-banner__overlay"></div>
+      
+      <div className="fabric-banner__glass-card">
         <p className="fabric-banner__eyebrow">Matériaux Haut de Gamme</p>
         <h2 className="fabric-banner__title">
           Découvrez la qualité<br />de nos finitions
