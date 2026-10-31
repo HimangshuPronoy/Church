@@ -3,23 +3,23 @@ import './HowItWorks.css';
 const steps = [
   {
     number: '01',
-    title: 'A Warm Welcome & Fresh Coffee',
-    desc: 'From the moment you step into our atrium, our welcome team is ready to greet you, answer questions, and treat you to complimentary coffee.',
+    title: 'Join Our Discord Server',
+    desc: 'Jump into our friendly Discord community to get the verified Roblox sanctuary game link, meet founders Gideon, Kevin & Adam, and access 24/7 prayer channels.',
   },
   {
     number: '02',
-    title: 'Safe & Engaging NextGen Kids',
-    desc: 'If you bring your family, our secure check-in gives parents peace of mind while kids experience fun, age-appropriate bible adventures.',
+    title: 'Launch Roblox & Step Into the Sanctuary',
+    desc: 'Join the Renewed Vision 3D Church Sanctuary on PC, mobile, or console. Customize your avatar, explore the prayer chapel, and find a seat.',
   },
   {
     number: '03',
-    title: 'Inspiring Worship & Practical Truth',
-    desc: 'Experience 70 minutes of authentic, modern worship music and an inspiring, biblically grounded message that speaks to your everyday life.',
+    title: 'Sunday Prayer Service at 3:00 PM IST',
+    desc: 'Every Sunday at 3:00 PM IST, gather with believers worldwide for live uplifting praise, communal prayer, and an inspiring Gospel message streamed live.',
   },
   {
     number: '04',
-    title: 'Connection & Community Lounge',
-    desc: 'After the service, meet our pastors, grab your first-time visitor welcome gift, and discover simple ways to join a Life Group.',
+    title: 'Voice Hangouts & Community Game Nights',
+    desc: 'Stay connected after service on Discord voice stages for fellowship, Life Group discussions, community gaming events, and global missions updates.',
   },
 ];
 
@@ -34,10 +34,10 @@ export default function HowItWorks() {
     <section className="how">
       <div className="how__inner">
         <div className="how__header">
-          <p className="how__eyebrow">Visiting Renewed Vision</p>
-          <h2 className="how__title">What to expect on your first Sunday</h2>
+          <p className="how__eyebrow">Roblox &amp; Discord Experience</p>
+          <h2 className="how__title">How to join our Sunday gathering</h2>
           <p className="how__sub">
-            Walking through church doors shouldn’t feel intimidating. Here is the seamless, welcoming experience waiting for you and your family.
+            Gathering together is effortless and accessible from anywhere in the world. Here is how you can step into our 3D Roblox Sanctuary and Discord community this Sunday at 3:00 PM IST.
           </p>
         </div>
         
@@ -64,7 +64,7 @@ export default function HowItWorks() {
                 onClick={(e) => handleLinkClick(e, 'visit')}
                 className="how__cta"
               >
-                Plan Your Sunday Visit
+                Join on Discord &amp; Roblox
               </a>
             </div>
           </div>

@@ -3,10 +3,10 @@ import { X, ChevronLeft, ChevronRight } from 'lucide-react';
 import './PromoBar.css';
 
 const promos = [
-  'Join Us This Sunday for Prayer Service at 3:00 PM IST · In-Person & Online Livestream',
-  'Welcome to Renewed Vision Church Community · A Place to Belong & Grow in Grace',
-  'Sunday Prayer Service Every Week at 3:00 PM IST · All Are Welcome',
-  'Find Your People · Life Groups & Community Are Now Open for Registration',
+  '🎮 Gathering on Roblox & Discord Server · Sunday Prayer Service at 3:00 PM IST',
+  '💬 Join our Active Discord Server for 24/7 Fellowship, Prayer & Announcements',
+  '✝ Renewed Vision Church Community · Preaching the Gospel & Transforming Lives in the Metaverse',
+  '🌍 Supporting Small Churches Worldwide & Orphanages Through Our Benevolence Fund',
 ];
 
 export default function PromoBar() {

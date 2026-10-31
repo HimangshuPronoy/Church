@@ -1,6 +1,7 @@
 .hero {
   position: relative;
-  height: calc(100vh - 52px); /* Minus navbar height */
+  height: calc(100vh - 108px);
+  min-height: 560px;
   background: #000;
   overflow: hidden;
 }

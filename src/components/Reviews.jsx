@@ -4,31 +4,31 @@ import './Reviews.css';
 const reviews = [
   {
     name: 'Marcus & Jessica T.',
-    location: 'Church Members since 2022',
+    location: 'Discord Members since 2023',
     rating: 5,
-    text: 'When our family first walked through the doors of Renewed Vision, we were looking for a place where our children could flourish spiritually and where we could build real, lasting friendships. We found a true spiritual home.',
-    product: 'Family & Life Groups',
+    text: 'When our family first logged into Renewed Vision on Roblox, we were blown away by how welcoming the community was. Gathering for Sunday prayer service at 3 PM IST has become the highlight of our week.',
+    product: 'Roblox Sanctuary',
   },
   {
     name: 'David K.',
-    location: 'Young Adults Ministry',
+    location: 'Discord Youth & Gaming',
     rating: 5,
-    text: 'The worship is authentic and the sermons meet you right where you are. Going through college transitions was tough, but this community surrounded me with prayer, genuine grace, and consistent mentorship.',
-    product: 'NextGen Young Adults',
+    text: 'The Discord stage sermons and voice chats meet you right where you are. Gideon, Kevin and Adam lead with so much humility. The community game nights and 24/7 prayer channels are incredible.',
+    product: 'Discord Fellowship',
   },
   {
     name: 'Elena & Carlos R.',
-    location: 'Life Group Leaders',
+    location: 'Global Missions Partner',
     rating: 5,
-    text: 'Hosting a Life Group has been one of the greatest blessings of our lives. Opening our home to break bread, pray together, and share joys and sorrows is what the church was always meant to be.',
-    product: 'Life Groups & Prayer',
+    text: 'Knowing that Renewed Vision directly channels donations and support to small churches worldwide and local orphanages gives our family purpose. We love partnering with this vision.',
+    product: 'Worldwide Benevolence',
   },
   {
     name: 'Hannah P.',
-    location: 'Outreach Volunteer',
+    location: 'Prayer Team Member',
     rating: 5,
-    text: 'Serving in our weekend food pantry and community outreach opened my eyes to how much difference a loving church family can make. Renewed Vision puts love into action every single week.',
-    product: 'Community Compassion',
+    text: 'Stepping into the 3D prayer chapel inside Roblox during Sunday prayer at 3:00 PM IST is deeply moving. You feel God’s presence and the love of brothers and sisters from around the globe.',
+    product: 'Sunday Prayer Service',
   },
 ];
 

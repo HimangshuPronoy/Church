@@ -18,10 +18,10 @@ export default function FabricBanner() {
       <div className="fabric-banner__glass-card">
         <p className="fabric-banner__eyebrow">A Place For You</p>
         <h2 className="fabric-banner__title">
-          There is a Seat Saved<br />Just for You
+          A Global Sanctuary<br />Open to the World
         </h2>
         <p className="fabric-banner__text">
-          No background is too distant, and no question is off-limits. Whether you have walked with God for decades or are exploring faith for the first time, you are welcomed with open arms at Renewed Vision Church Community.
+          No background is too distant, and no question is off-limits. Whether you join us on PC, mobile, or console, you have a seat saved in our 3D Roblox Sanctuary and Discord server every Sunday at 3:00 PM IST.
         </p>
         <div className="fabric-banner__actions">
           <a
@@ -29,7 +29,7 @@ export default function FabricBanner() {
             onClick={(e) => handleLinkClick(e, 'visit')}
             className="fabric-banner__btn fabric-banner__btn--primary"
           >
-            Plan Your Sunday Visit
+            Join on Roblox &amp; Discord
           </a>
           <a
             href="#contact"

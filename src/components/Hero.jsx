@@ -4,26 +4,26 @@ import './Hero.css';
 const slides = [
   {
     image: '/images/church/hero_worship.jpg',
-    eyebrow: 'Welcome to Renewed Vision Church Community',
+    eyebrow: 'Roblox & Discord Church Community',
     title: 'A Place to Belong, Believe & Flourish',
-    subtitle: 'We are a vibrant, Christ-centered family devoted to authentic worship, transformative faith, and loving service in our city.',
-    ctaPrimary: { label: 'Plan Your Visit', target: 'visit' },
-    ctaSecondary: { label: 'Explore Ministries', target: 'ministries' },
+    subtitle: 'We are a vibrant, Christ-centered community meeting on Roblox and Discord, passionate about preaching the Gospel, spiritual renewal, and helping others worldwide.',
+    ctaPrimary: { label: 'Join Discord Server', target: 'visit' },
+    ctaSecondary: { label: 'Explore Roblox Church', target: 'visit' },
   },
   {
     image: '/images/church/hero_fellowship.jpg',
-    eyebrow: 'Authentic Community & Care',
+    eyebrow: 'Discord Fellowship & Life Groups',
     title: 'You Were Never Meant to Walk Alone',
-    subtitle: 'Find genuine friendships, warm coffee & fellowship, and life-changing encouragement in our weekly Life Groups.',
-    ctaPrimary: { label: 'Join a Life Group', target: 'ministries' },
+    subtitle: 'Find genuine friendships, 24/7 prayer channels, voice stages, and life-changing encouragement in our active Discord community.',
+    ctaPrimary: { label: 'Join Discord Community', target: 'visit' },
     ctaSecondary: { label: 'Community Life', target: 'gallery' },
   },
   {
     image: '/images/church/hero_sanctuary.jpg',
     eyebrow: 'Sunday Prayer Service · 3:00 PM IST',
-    title: 'Encounter God’s Transforming Grace',
-    subtitle: 'Gather with us every Sunday at 3:00 PM IST for our uplifting Prayer Service, inspiring biblical truth, and heartfelt prayer. In-person & live online.',
-    ctaPrimary: { label: 'Service Times & Location', target: 'visit' },
+    title: 'Encounter God in the Metaverse',
+    subtitle: 'Gather with us every Sunday at 3:00 PM IST inside our Roblox Church Sanctuary and Discord Stage for uplifting praise, biblical truth, and heartfelt prayer.',
+    ctaPrimary: { label: 'Roblox & Discord Details', target: 'visit' },
     ctaSecondary: { label: 'Prayer & Connect', target: 'contact' },
   },
 ];
@@ -110,10 +110,10 @@ export default function Hero() {
             className="hero__tile-img"
           />
           <div className="hero__tile-content">
-            <span className="hero__tile-label">Sunday Prayer Service · 3:00 PM IST</span>
-            <h3 className="hero__tile-title">Encounter God in uplifting worship &amp; prayer</h3>
+            <span className="hero__tile-label">Roblox Sanctuary · Sundays at 3:00 PM IST</span>
+            <h3 className="hero__tile-title">Encounter God in our 3D Roblox Sanctuary &amp; Discord Stage</h3>
             <a href="#visit" onClick={(e) => handleLinkClick(e, 'visit')} className="hero__tile-link">
-              Plan Your Sunday Visit →
+              How to Join on Roblox →
             </a>
           </div>
         </div>
@@ -124,10 +124,10 @@ export default function Hero() {
             className="hero__tile-img"
           />
           <div className="hero__tile-content hero__tile-content--light">
-            <span className="hero__tile-label">Community & Connection</span>
-            <h3 className="hero__tile-title">Find your family in small groups</h3>
-            <a href="#ministries" onClick={(e) => handleLinkClick(e, 'ministries')} className="hero__tile-link hero__tile-link--dark">
-              Explore Life Groups →
+            <span className="hero__tile-label">Discord Community &amp; Fellowship</span>
+            <h3 className="hero__tile-title">24/7 Prayer Channels &amp; Voice Hangouts</h3>
+            <a href="#visit" onClick={(e) => handleLinkClick(e, 'visit')} className="hero__tile-link hero__tile-link--dark">
+              Join Discord Server →
             </a>
           </div>
         </div>
