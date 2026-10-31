@@ -143,7 +143,7 @@
   margin-top: 64px;
 }
 
-.reviews__trustpilot-link {
+.reviews__community-link {
   display: inline-flex;
   align-items: center;
   gap: 12px;
@@ -156,24 +156,14 @@
   text-decoration: none;
   transition: all 0.3s ease;
   box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+  border: 1px solid rgba(0,0,0,0.06);
 }
 
-.reviews__trustpilot-link:hover {
-  background: #111;
+.reviews__community-link:hover {
+  background: var(--color-black);
   color: #fff;
   transform: translateY(-2px);
   box-shadow: 0 15px 30px rgba(0,0,0,0.1);
-}
-
-.reviews__trustpilot-logo {
-  height: 22px;
-  width: auto;
-  filter: grayscale(100%);
-  transition: filter 0.3s;
-}
-
-.reviews__trustpilot-link:hover .reviews__trustpilot-logo {
-  filter: grayscale(0%);
 }
 
 @media (max-width: 600px) {

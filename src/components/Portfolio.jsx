@@ -1,29 +1,75 @@
 import './Portfolio.css';
 
-const placeholders = [
-  { id: 1, span: 'col-span-2 row-span-2' },
-  { id: 2, span: 'col-span-1 row-span-1' },
-  { id: 3, span: 'col-span-1 row-span-1' },
-  { id: 4, span: 'col-span-2 row-span-1' },
-  { id: 5, span: 'col-span-1 row-span-2' },
-  { id: 6, span: 'col-span-1 row-span-1' },
-  { id: 7, span: 'col-span-1 row-span-1' },
+const galleryItems = [
+  {
+    id: 1,
+    image: '/images/church/hero_worship.jpg',
+    title: 'Sunday Celebration Worship',
+    category: 'Worship Experience',
+    span: 'col-span-2 row-span-2',
+  },
+  {
+    id: 2,
+    image: '/images/church/gallery_baptism.jpg',
+    title: 'Baptism Celebrations',
+    category: 'New Beginnings',
+    span: 'col-span-1 row-span-1',
+  },
+  {
+    id: 3,
+    image: '/images/church/gallery_kids.jpg',
+    title: 'NextGen Kids Adventure',
+    category: 'Family & Children',
+    span: 'col-span-1 row-span-1',
+  },
+  {
+    id: 4,
+    image: '/images/church/hero_fellowship.jpg',
+    title: 'Coffee & Connection Atrium',
+    category: 'Hospitality & Care',
+    span: 'col-span-2 row-span-1',
+  },
+  {
+    id: 5,
+    image: '/images/church/hero_sanctuary.jpg',
+    title: 'Sacred Sanctuary Peace',
+    category: 'Prayer & Reflection',
+    span: 'col-span-1 row-span-2',
+  },
+  {
+    id: 6,
+    image: '/images/church/gallery_prayer.jpg',
+    title: 'Living Word & Bible Study',
+    category: 'Spiritual Growth',
+    span: 'col-span-1 row-span-1',
+  },
+  {
+    id: 7,
+    image: '/images/church/gallery_community.jpg',
+    title: 'Community Fellowship Picnic',
+    category: 'Church Family',
+    span: 'col-span-1 row-span-1',
+  },
 ];
 
 export default function Portfolio() {
   return (
-    <section id="portfolio" className="portfolio">
+    <section id="gallery" className="portfolio">
       <div className="portfolio-header">
-        <p className="portfolio-eyebrow">Notre Portfolio</p>
-        <h2 className="portfolio-title">Nos Réalisations</h2>
-        <p className="portfolio-sub">Découvrez un aperçu de nos projets précédents. Des créations uniques qui transforment l'espace extérieur en véritable oasis.</p>
+        <p className="portfolio-eyebrow">Community Life</p>
+        <h2 className="portfolio-title">Moments of Faith, Joy &amp; Grace</h2>
+        <p className="portfolio-sub">
+          A glimpse into life at Renewed Vision Church Community—from vibrant Sunday worship and baptisms to family picnics and outreach.
+        </p>
       </div>
 
       <div className="portfolio-grid">
-        {placeholders.map((item) => (
+        {galleryItems.map((item) => (
           <div key={item.id} className={`portfolio-item ${item.span}`}>
-            <div className="portfolio-placeholder">
-              <span className="portfolio-placeholder-text">À venir</span>
+            <img src={item.image} alt={item.title} className="portfolio-img" />
+            <div className="portfolio-overlay">
+              <span className="portfolio-category">{item.category}</span>
+              <h3 className="portfolio-item-title">{item.title}</h3>
             </div>
           </div>
         ))}

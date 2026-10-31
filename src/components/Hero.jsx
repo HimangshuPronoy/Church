@@ -1,36 +1,43 @@
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect } from 'react';
 import './Hero.css';
 
-const videos = [
-  '/videos/hero_video_1.mp4',
-  '/videos/hero_video_2.mp4',
-  '/videos/hero_video_3.mp4',
-  '/videos/hero_video_4.mp4'
+const slides = [
+  {
+    image: '/images/church/hero_worship.jpg',
+    eyebrow: 'Welcome to Renewed Vision Church Community',
+    title: 'A Place to Belong, Believe & Flourish',
+    subtitle: 'We are a vibrant, Christ-centered family devoted to authentic worship, transformative faith, and loving service in our city.',
+    ctaPrimary: { label: 'Plan Your Visit', target: 'visit' },
+    ctaSecondary: { label: 'Explore Ministries', target: 'ministries' },
+  },
+  {
+    image: '/images/church/hero_fellowship.jpg',
+    eyebrow: 'Authentic Community & Care',
+    title: 'You Were Never Meant to Walk Alone',
+    subtitle: 'Find genuine friendships, warm coffee & fellowship, and life-changing encouragement in our weekly Life Groups.',
+    ctaPrimary: { label: 'Join a Life Group', target: 'ministries' },
+    ctaSecondary: { label: 'Community Life', target: 'gallery' },
+  },
+  {
+    image: '/images/church/hero_sanctuary.jpg',
+    eyebrow: 'Sunday Worship Experiences',
+    title: 'Encounter God’s Transforming Grace',
+    subtitle: 'Gather with us every Sunday at 9:00 AM & 11:15 AM for uplifting praise, biblical truth, and heartfelt prayer. In-person & live online.',
+    ctaPrimary: { label: 'Service Times & Location', target: 'visit' },
+    ctaSecondary: { label: 'Prayer & Connect', target: 'contact' },
+  },
 ];
 
 export default function Hero() {
-  const [currentVideo, setCurrentVideo] = useState(0);
-  const videoRefs = useRef([]);
+  const [currentSlide, setCurrentSlide] = useState(0);
 
-  // Auto-play next video when current one ends
-  const handleVideoEnd = () => {
-    setCurrentVideo((prev) => (prev + 1) % videos.length);
-  };
-
+  // Auto-advance slides every 6 seconds
   useEffect(() => {
-    // Ensure the current video plays
-    videos.forEach((_, idx) => {
-      const vid = videoRefs.current[idx];
-      if (vid) {
-        if (idx === currentVideo) {
-          vid.currentTime = 0;
-          vid.play().catch(e => console.log("Autoplay blocked:", e));
-        } else {
-          vid.pause();
-        }
-      }
-    });
-  }, [currentVideo]);
+    const timer = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % slides.length);
+    }, 6000);
+    return () => clearInterval(timer);
+  }, []);
 
   const handleLinkClick = (e, targetId) => {
     e.preventDefault();
@@ -40,39 +47,53 @@ export default function Hero() {
     }
   };
 
+  const active = slides[currentSlide];
+
   return (
     <>
       <section className="hero">
         <div className="hero__carousel">
-          {videos.map((src, idx) => (
-            <video
-              key={src}
-              ref={el => videoRefs.current[idx] = el}
-              className={`hero__video ${idx === currentVideo ? 'active' : ''}`}
-              src={src}
-              muted
-              playsInline
-              onEnded={handleVideoEnd}
-            />
+          {slides.map((s, idx) => (
+            <div
+              key={s.image}
+              className={`hero__slide ${idx === currentSlide ? 'active' : ''}`}
+              style={{ backgroundImage: `url(${s.image})` }}
+              role="img"
+              aria-label={s.title}
+            >
+              <div className="hero__slide-backdrop" />
+            </div>
           ))}
+
           <div className="hero__content-overlay">
-            <p className="hero__eyebrow">Designs Primés</p>
-            <h1 className="hero__title">
-              La Piscine de vos Rêves,<br />Conçue à la Perfection
-            </h1>
-            <p className="hero__subtitle">
-              Sublimez votre espace extérieur avec une oasis sur mesure.<br />
-              Qualité irréprochable et savoir-faire expert.
-            </p>
-            <a href="#booking" onClick={(e) => handleLinkClick(e, 'booking')} className="hero__cta">Commencer votre Projet</a>
+            <p className="hero__eyebrow">{active.eyebrow}</p>
+            <h1 className="hero__title">{active.title}</h1>
+            <p className="hero__subtitle">{active.subtitle}</p>
+            
+            <div className="hero__actions">
+              <a
+                href={`#${active.ctaPrimary.target}`}
+                onClick={(e) => handleLinkClick(e, active.ctaPrimary.target)}
+                className="hero__cta hero__cta--primary"
+              >
+                {active.ctaPrimary.label}
+              </a>
+              <a
+                href={`#${active.ctaSecondary.target}`}
+                onClick={(e) => handleLinkClick(e, active.ctaSecondary.target)}
+                className="hero__cta hero__cta--secondary"
+              >
+                {active.ctaSecondary.label}
+              </a>
+            </div>
           </div>
 
           <div className="hero__carousel-nav">
-            {videos.map((_, idx) => (
+            {slides.map((_, idx) => (
               <button
                 key={idx}
-                className={`hero__carousel-dot ${idx === currentVideo ? 'active' : ''}`}
-                onClick={() => setCurrentVideo(idx)}
+                className={`hero__carousel-dot ${idx === currentSlide ? 'active' : ''}`}
+                onClick={() => setCurrentSlide(idx)}
                 aria-label={`Go to slide ${idx + 1}`}
               />
             ))}
@@ -84,26 +105,30 @@ export default function Hero() {
       <div className="hero__tiles">
         <div className="hero__tile hero__tile--dark">
           <img
-            src="/images/nano_geometric_pool.jpg"
-            alt="New Construction"
+            src="/images/church/hero_sanctuary.jpg"
+            alt="Sunday Worship Sanctuary"
             className="hero__tile-img"
           />
           <div className="hero__tile-content">
-            <span className="hero__tile-label">Nouvelle Construction</span>
-            <h3 className="hero__tile-title">La perfection géométrique moderne</h3>
-            <a href="#portfolio" onClick={(e) => handleLinkClick(e, 'portfolio')} className="hero__tile-link">Voir la Galerie →</a>
+            <span className="hero__tile-label">Sunday Gatherings · 9:00 & 11:15 AM</span>
+            <h3 className="hero__tile-title">Encounter God in uplifting worship & teaching</h3>
+            <a href="#visit" onClick={(e) => handleLinkClick(e, 'visit')} className="hero__tile-link">
+              Plan Your Sunday Visit →
+            </a>
           </div>
         </div>
         <div className="hero__tile">
           <img
-            src="/images/nano_spa_feature.jpg"
-            alt="Spas & Features"
+            src="/images/church/hero_fellowship.jpg"
+            alt="Life Groups and Fellowship"
             className="hero__tile-img"
           />
           <div className="hero__tile-content hero__tile-content--light">
-            <span className="hero__tile-label">Spas & Équipements</span>
-            <h3 className="hero__tile-title">Le luxe dans les moindres détails</h3>
-            <a href="#collections" onClick={(e) => handleLinkClick(e, 'collections')} className="hero__tile-link hero__tile-link--dark">Explorer les Options →</a>
+            <span className="hero__tile-label">Community & Connection</span>
+            <h3 className="hero__tile-title">Find your family in small groups</h3>
+            <a href="#ministries" onClick={(e) => handleLinkClick(e, 'ministries')} className="hero__tile-link hero__tile-link--dark">
+              Explore Life Groups →
+            </a>
           </div>
         </div>
       </div>

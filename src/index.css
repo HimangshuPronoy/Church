@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Inter:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap');
 
 *, *::before, *::after {
   box-sizing: border-box;
@@ -7,16 +7,19 @@
 }
 
 :root {
-  --color-black: #111111;
+  --color-black: #121316;
   --color-white: #ffffff;
-  --color-cream: #f8f5f0;
-  --color-light-gray: #f4f4f4;
-  --color-gray: #8a8a8a;
-  --color-mid-gray: #d4d4d4;
-  --color-dark-gray: #444444;
-  --color-accent: #c8a96e;
+  --color-cream: #faf7f2;
+  --color-warm-sand: #f3ede2;
+  --color-light-gray: #f4f4f5;
+  --color-gray: #71717a;
+  --color-mid-gray: #e4e4e7;
+  --color-dark-gray: #27272a;
+  --color-accent: #c99e32;
+  --color-accent-light: #dfb958;
+  --color-accent-dark: #a07817;
   --font-serif: 'Cormorant Garamond', Georgia, serif;
-  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
 html {

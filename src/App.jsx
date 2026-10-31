@@ -2,6 +2,7 @@ import './App.css';
 import PromoBar from './components/PromoBar';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
+import WhoWeAre from './components/WhoWeAre';
 import Features from './components/Features';
 import HowItWorks from './components/HowItWorks';
 import Categories from './components/Categories';
@@ -19,6 +20,7 @@ function App() {
       <Navbar />
       <main>
         <Hero />
+        <WhoWeAre />
         <Features />
         <Categories />
         <HowItWorks />

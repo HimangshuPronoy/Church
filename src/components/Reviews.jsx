@@ -1,35 +1,35 @@
-import { Star } from 'lucide-react';
+import { Star, Heart } from 'lucide-react';
 import './Reviews.css';
 
 const reviews = [
   {
-    name: 'Sarah M.',
-    location: 'Orgeval, FR',
+    name: 'Marcus & Jessica T.',
+    location: 'Church Members since 2022',
     rating: 5,
-    text: 'Du concept initial à la révélation finale, l\'équipe a été exceptionnelle. Notre nouvelle piscine à débordement a complètement transformé notre jardin en une retraite luxueuse.',
-    product: 'Piscine à Débordement Sur Mesure',
+    text: 'When our family first walked through the doors of Renewed Vision, we were looking for a place where our children could flourish spiritually and where we could build real, lasting friendships. We found a true spiritual home.',
+    product: 'Family & Life Groups',
   },
   {
-    name: 'James D.',
-    location: 'Orgeval, FR',
+    name: 'David K.',
+    location: 'Young Adults Ministry',
     rating: 5,
-    text: 'Une attention aux détails incroyable. Le spa personnalisé qu\'ils ont conçu s\'intègre parfaitement à notre paysage existant. Je recommande vivement leur savoir-faire.',
-    product: 'Spa Intégré',
+    text: 'The worship is authentic and the sermons meet you right where you are. Going through college transitions was tough, but this community surrounded me with prayer, genuine grace, and consistent mentorship.',
+    product: 'NextGen Young Adults',
   },
   {
-    name: 'Elena R.',
-    location: 'Orgeval, FR',
+    name: 'Elena & Carlos R.',
+    location: 'Life Group Leaders',
     rating: 5,
-    text: 'Professionnels, ponctuels et transparents tout au long du processus. La conception géométrique correspond exactement à l\'esthétique moderne que nous recherchions.',
-    product: 'Piscine Géométrique',
+    text: 'Hosting a Life Group has been one of the greatest blessings of our lives. Opening our home to break bread, pray together, and share joys and sorrows is what the church was always meant to be.',
+    product: 'Life Groups & Prayer',
   },
   {
-    name: 'Sophie L.',
-    location: 'Orgeval, FR',
+    name: 'Hannah P.',
+    location: 'Outreach Volunteer',
     rating: 5,
-    text: 'Une expérience de construction fantastique. L\'équipe de Piscine Miroir Concept a fait preuve d\'un grand professionnalisme, et notre piscine lagon est le joyau de notre maison.',
-    product: 'Piscine Lagon & Spa',
-  }
+    text: 'Serving in our weekend food pantry and community outreach opened my eyes to how much difference a loving church family can make. Renewed Vision puts love into action every single week.',
+    product: 'Community Compassion',
+  },
 ];
 
 function StarRow({ count }) {
@@ -39,8 +39,8 @@ function StarRow({ count }) {
         <Star
           key={i}
           size={14}
-          fill={i < count ? '#c8a96e' : 'none'}
-          stroke={i < count ? '#c8a96e' : '#ccc'}
+          fill={i < count ? '#c99e32' : 'none'}
+          stroke={i < count ? '#c99e32' : '#ccc'}
         />
       ))}
     </div>
@@ -48,20 +48,24 @@ function StarRow({ count }) {
 }
 
 export default function Reviews() {
+  const handleLinkClick = (e, targetId) => {
+    e.preventDefault();
+    const el = document.getElementById(targetId);
+    if (el) el.scrollIntoView({ behavior: 'smooth' });
+  };
+
   return (
-    <section id="reviews" className="reviews">
+    <section id="stories" className="reviews">
       <div className="reviews__inner">
-        
         {/* Header */}
         <div className="reviews__header">
-          <p className="reviews__eyebrow">Histoires de Clients</p>
-          <h2 className="reviews__title">Ce que disent nos clients</h2>
+          <p className="reviews__eyebrow">Stories of Grace &amp; Faith</p>
+          <h2 className="reviews__title">Voices from our church community</h2>
         </div>
 
         {/* Infinite Marquee */}
         <div className="reviews__marquee">
           <div className="reviews__marquee-track">
-            {/* Render array twice for infinite loop effect */}
             {[...reviews, ...reviews, ...reviews].map((r, i) => (
               <div key={`${r.name}-${i}`} className="review-card">
                 <StarRow count={r.rating} />
@@ -80,17 +84,12 @@ export default function Reviews() {
 
         <div className="reviews__cta-wrap">
           <a
-            href="https://www.trustpilot.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="reviews__trustpilot-link"
+            href="#contact"
+            onClick={(e) => handleLinkClick(e, 'contact')}
+            className="reviews__community-link"
           >
-            <img
-              src="https://upload.wikimedia.org/wikipedia/commons/7/78/Trustpilot_Logo_%282022%29.svg"
-              alt="Trustpilot"
-              className="reviews__trustpilot-logo"
-            />
-            <span>Lire tous les avis sur Trustpilot</span>
+            <Heart size={16} color="var(--color-accent)" />
+            <span>Have a testimony to share or need prayer? Connect with our team</span>
           </a>
         </div>
       </div>

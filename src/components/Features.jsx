@@ -3,34 +3,34 @@ import './Features.css';
 const features = [
   {
     icon: '✦',
-    title: 'Conception 3D Sur Mesure',
-    desc: 'Chaque piscine est méticuleusement conçue en 3D pour que vous puissiez voir exactement à quoi elle ressemblera dans votre jardin.',
+    title: 'Christ-Centered Worship',
+    desc: 'Uplifting, heartfelt praise that draws hearts closer to God through contemporary and reflective worship.',
   },
   {
     icon: '◈',
-    title: 'Matériaux Haut de Gamme',
-    desc: "Nous n'utilisons que les meilleurs carrelages, margelles et finitions pour garantir que votre piscine résiste à l'épreuve du temps.",
+    title: 'Living Biblical Truth',
+    desc: 'Biblically faithful, practical sermons that inspire spiritual transformation and daily purpose.',
   },
   {
     icon: '⬡',
-    title: 'Plus de 1 500 Projets Réalisés',
-    desc: 'La confiance de propriétaires qui apprécient la qualité, la précision et une expérience de construction sans faille.',
+    title: 'Warm & Inclusive Family',
+    desc: 'A multigenerational community where everyone from young seekers to mature believers has a true home.',
   },
   {
     icon: '◎',
-    title: 'Savoir-Faire Expert',
-    desc: 'Nos artisans expérimentés traitent chaque détail, de l\'excavation à la finition finale avec le plus grand soin.',
+    title: 'Compassionate Outreach',
+    desc: 'Putting love into action with neighborhood service projects, local food drives, and care initiatives.',
   },
 ];
 
 export default function Features() {
   return (
-    <section className="features">
+    <section id="values" className="features">
       <div className="features__inner">
         <div className="features__header">
-          <p className="features__eyebrow">Pourquoi Piscine Miroir Concept</p>
+          <p className="features__eyebrow">Our Core Values</p>
           <h2 className="features__title">
-            Design époustouflant.<br />Savoir-faire expert.<br />Qualité durable.
+            Rooted in Christ.<br />Bound in Love.<br />Sent to Serve.
           </h2>
         </div>
         <div className="features__grid">
