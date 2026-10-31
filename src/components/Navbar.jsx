@@ -72,7 +72,7 @@ export default function Navbar() {
           onClick={(e) => handleLinkClick(e, 'visit')} 
           className="navbar__nav-btn navbar__nav-special"
         >
-          Sunday Service: 9:00 & 11:15 AM
+          Sunday Prayer Service: 3:00 PM IST
         </a>
         <a 
           href="#contact" 

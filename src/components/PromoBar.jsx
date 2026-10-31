@@ -3,10 +3,10 @@ import { X, ChevronLeft, ChevronRight } from 'lucide-react';
 import './PromoBar.css';
 
 const promos = [
-  'Join Us This Sunday at 9:00 AM & 11:15 AM · In-Person & Online Livestream',
+  'Join Us This Sunday for Prayer Service at 3:00 PM IST · In-Person & Online Livestream',
   'Welcome to Renewed Vision Church Community · A Place to Belong & Grow in Grace',
-  'Find Your People · Autumn Life Groups Are Now Open for Registration',
-  'Midweek Prayer & Worship Every Wednesday at 7:00 PM',
+  'Sunday Prayer Service Every Week at 3:00 PM IST · All Are Welcome',
+  'Find Your People · Life Groups & Community Are Now Open for Registration',
 ];
 
 export default function PromoBar() {

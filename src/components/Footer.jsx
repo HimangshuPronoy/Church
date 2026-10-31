@@ -3,7 +3,7 @@ import './Footer.css';
 
 const footerLinks = {
   'Ministries': [
-    'Sunday Worship Services',
+    'Sunday Prayer Service (3:00 PM IST)',
     'Life Groups & Community',
     'NextGen Kids & Youth',
     'Prayer & Healing Ministry',
@@ -58,7 +58,7 @@ export default function Footer() {
           </p>
           <div className="footer__contact-info" style={{ marginTop: '16px', color: '#999', fontSize: '13.5px', lineHeight: '1.6' }}>
             <p>100 Grace Way, Community Sanctuary</p>
-            <p style={{ marginTop: '4px' }}>Sunday Worship: 9:00 AM &amp; 11:15 AM</p>
+            <p style={{ marginTop: '4px' }}>Sunday Prayer Service: 3:00 PM IST</p>
             <p style={{ marginTop: '4px' }}>Phone: +1 (555) 789-2026</p>
             <p style={{ marginTop: '4px' }}>Email: welcome@renewedvisionchurch.org</p>
           </div>

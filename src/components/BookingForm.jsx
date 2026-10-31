@@ -47,8 +47,8 @@ export default function BookingForm() {
             <div className="booking__info-item">
               <Clock size={20} className="booking__info-icon" />
               <div>
-                <strong>Sunday Service Times</strong>
-                <p>9:00 AM &amp; 11:15 AM · In-Person &amp; Online</p>
+                <strong>Sunday Prayer Service</strong>
+                <p>Sundays at 3:00 PM IST · In-Person &amp; Online</p>
               </div>
             </div>
 

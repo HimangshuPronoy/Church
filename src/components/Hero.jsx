@@ -20,9 +20,9 @@ const slides = [
   },
   {
     image: '/images/church/hero_sanctuary.jpg',
-    eyebrow: 'Sunday Worship Experiences',
+    eyebrow: 'Sunday Prayer Service · 3:00 PM IST',
     title: 'Encounter God’s Transforming Grace',
-    subtitle: 'Gather with us every Sunday at 9:00 AM & 11:15 AM for uplifting praise, biblical truth, and heartfelt prayer. In-person & live online.',
+    subtitle: 'Gather with us every Sunday at 3:00 PM IST for our uplifting Prayer Service, inspiring biblical truth, and heartfelt prayer. In-person & live online.',
     ctaPrimary: { label: 'Service Times & Location', target: 'visit' },
     ctaSecondary: { label: 'Prayer & Connect', target: 'contact' },
   },
@@ -110,8 +110,8 @@ export default function Hero() {
             className="hero__tile-img"
           />
           <div className="hero__tile-content">
-            <span className="hero__tile-label">Sunday Gatherings · 9:00 & 11:15 AM</span>
-            <h3 className="hero__tile-title">Encounter God in uplifting worship & teaching</h3>
+            <span className="hero__tile-label">Sunday Prayer Service · 3:00 PM IST</span>
+            <h3 className="hero__tile-title">Encounter God in uplifting worship &amp; prayer</h3>
             <a href="#visit" onClick={(e) => handleLinkClick(e, 'visit')} className="hero__tile-link">
               Plan Your Sunday Visit →
             </a>

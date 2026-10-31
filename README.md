@@ -4,7 +4,7 @@ A modern, welcoming, and inspiring web application for **Renewed Vision Church C
 
 ## Features & Structure
 
-- **Announcement Bar**: Service schedules, online livestream times, and welcoming notes.
+- **Announcement Bar**: Sunday Prayer Service schedule (Sundays at 3:00 PM IST), livestream alerts, and welcoming notes.
 - **Header & Navbar**: Brand logo with cross icon, smooth-scrolling navigation (`About Us`, `Ministries`, `Community Life`, `Stories`), and quick actions (`Plan a Visit`, `Connect & Prayer`).
 - **Hero Carousel**: High-impact modern sanctuary and community imagery with auto-slide transitions, welcoming vision statement, and sub-hero tiles.
 - **Core Values**: "Rooted in Christ. Bound in Love. Sent to Serve."
