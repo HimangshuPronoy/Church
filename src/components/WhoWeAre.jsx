@@ -5,19 +5,19 @@ const leaders = [
   {
     name: 'Gideon',
     role: 'Founder',
-    image: '/images/church/founder_gideon.jpg',
+    initial: 'G',
     description: 'Devoted to preaching the living Gospel, discipling leaders, and guiding people into spiritual breakthrough and life-changing faith in Christ.',
   },
   {
     name: 'Kevin',
     role: 'Founder',
-    image: '/images/church/founder_kevin.jpg',
+    initial: 'K',
     description: 'Passionate about pastoral care, kingdom vision, and expanding generous benevolence to uplift families and transform communities.',
   },
   {
     name: 'Adam',
     role: 'Co-Founder',
-    image: '/images/church/cofounder_adam.jpg',
+    initial: 'A',
     description: 'Dedicated to outreach operations, mobilizing worldwide missions, and ensuring support reaches small churches and orphanages across the globe.',
   },
 ];
@@ -57,8 +57,10 @@ export default function WhoWeAre() {
           <div className="who__founders-grid">
             {leaders.map((leader) => (
               <div key={leader.name} className="founder-card">
-                <div className="founder-card__img-wrap">
-                  <img src={leader.image} alt={leader.name} className="founder-card__img" />
+                <div className="founder-card__header">
+                  <div className="founder-card__avatar">
+                    <span className="founder-card__initial">{leader.initial}</span>
+                  </div>
                   <span className={`founder-card__tag ${leader.role.toLowerCase().includes('co') ? 'founder-card__tag--co' : ''}`}>
                     {leader.role}
                   </span>
