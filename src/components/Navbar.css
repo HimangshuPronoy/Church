@@ -27,18 +27,21 @@
   align-items: center;
   gap: 10px;
   flex-shrink: 0;
+  z-index: 2;
 }
 
 .navbar__logo-cross {
   font-size: 22px;
   color: var(--color-accent);
   line-height: 1;
+  flex-shrink: 0;
 }
 
 .navbar__logo-text {
   display: flex;
   flex-direction: column;
   text-align: left;
+  flex-shrink: 0;
 }
 
 .navbar__logo-main {
@@ -47,6 +50,7 @@
   letter-spacing: 0.14em;
   line-height: 1.1;
   color: var(--color-black);
+  white-space: nowrap;
 }
 
 .navbar__logo-sub {
@@ -55,6 +59,7 @@
   letter-spacing: 0.18em;
   color: var(--color-accent);
   margin-top: 2px;
+  white-space: nowrap;
 }
 
 /* Center Desktop Navigation */
@@ -223,13 +228,13 @@
 }
 
 /* Responsive */
-@media (max-width: 1120px) {
+@media (max-width: 1240px) {
   .navbar__service-badge {
     display: none;
   }
 }
 
-@media (max-width: 960px) {
+@media (max-width: 1080px) {
   .navbar__nav {
     display: none;
   }
@@ -241,18 +246,21 @@
   }
 }
 
+@media (max-width: 768px) {
+  .navbar__btn--discord {
+    display: none;
+  }
+}
+
 @media (max-width: 600px) {
   .navbar__container {
     padding: 0 16px;
     height: 60px;
   }
   .navbar__logo-main {
-    font-size: 13.5px;
+    font-size: 13px;
   }
   .navbar__logo-sub {
     font-size: 7.5px;
-  }
-  .navbar__btn--discord {
-    display: none;
   }
 }
