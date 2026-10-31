@@ -1,4 +1,4 @@
-import { Instagram, Youtube } from 'lucide-react';
+import { Instagram, Youtube, Mail } from 'lucide-react';
 import './Footer.css';
 
 function DiscordIcon({ size = 18 }) {
@@ -84,7 +84,12 @@ export default function Footer() {
             <p><strong>Place:</strong> Roblox Sanctuary Experience &amp; Discord Server</p>
             <p style={{ marginTop: '4px' }}><strong>Sunday Prayer:</strong> Sundays at 3:00 PM IST</p>
             <p style={{ marginTop: '4px' }}><strong>Founders:</strong> Gideon &amp; Kevin · <strong>Co-Founder:</strong> Adam</p>
-            <p style={{ marginTop: '4px' }}><strong>Email:</strong> welcome@renewedvisionchurch.org</p>
+            <p style={{ marginTop: '4px' }}>
+              <strong>Email:</strong>{' '}
+              <a href="mailto:renewedvisionchurch@gmail.com" style={{ color: '#aaa', textDecoration: 'none' }}>
+                renewedvisionchurch@gmail.com
+              </a>
+            </p>
           </div>
           <div className="footer__socials">
             <a href="https://discord.gg/Un68FwruM" target="_blank" rel="noopener noreferrer" aria-label="Discord Server" className="footer__social-link" title="Discord Server">
@@ -92,6 +97,9 @@ export default function Footer() {
             </a>
             <a href="https://www.roblox.com/games/87206202638986" target="_blank" rel="noopener noreferrer" aria-label="Roblox Sanctuary" className="footer__social-link" title="Roblox Church Sanctuary">
               <RobloxIcon size={18} />
+            </a>
+            <a href="mailto:renewedvisionchurch@gmail.com" aria-label="Email Us" className="footer__social-link" title="Email Pastoral Team">
+              <Mail size={18} />
             </a>
             <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" aria-label="YouTube" className="footer__social-link" title="YouTube">
               <Youtube size={18} />

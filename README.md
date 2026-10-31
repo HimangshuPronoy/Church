@@ -12,6 +12,7 @@ A modern, welcoming, and inspiring web application for **Renewed Vision Church C
 - **Discord Server:** [https://discord.gg/Un68FwruM](https://discord.gg/Un68FwruM)
 - **Roblox Experience:** [https://www.roblox.com/games/87206202638986](https://www.roblox.com/games/87206202638986)
 - **Weekly Service:** **Sunday Prayer Service at 3:00 PM IST** (Roblox 3D Sanctuary & Discord Stage).
+- **Official Email:** [renewedvisionchurch@gmail.com](mailto:renewedvisionchurch@gmail.com)
 
 ## Features & Structure
 

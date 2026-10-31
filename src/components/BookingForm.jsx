@@ -111,7 +111,9 @@ export default function BookingForm() {
               <Mail size={20} className="booking__info-icon" />
               <div>
                 <strong>Email Leadership Team</strong>
-                <p>welcome@renewedvisionchurch.org</p>
+                <a href="mailto:renewedvisionchurch@gmail.com" style={{ color: '#555', textDecoration: 'none' }}>
+                  <p>renewedvisionchurch@gmail.com</p>
+                </a>
               </div>
             </div>
           </div>
