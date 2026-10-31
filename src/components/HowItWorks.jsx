@@ -58,13 +58,23 @@ export default function HowItWorks() {
                 <p className="how__step-desc">{s.desc}</p>
               </div>
             ))}
-            <div className="how__cta-wrap">
+            <div className="how__cta-wrap" style={{ display: 'flex', gap: '12px', flexWrap: 'wrap' }}>
               <a
-                href="#visit"
-                onClick={(e) => handleLinkClick(e, 'visit')}
+                href="https://discord.gg/Un68FwruM"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="how__cta"
               >
-                Join on Discord &amp; Roblox
+                Join Discord Server
+              </a>
+              <a
+                href="https://www.roblox.com/games/87206202638986"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="how__cta"
+                style={{ background: '#111', borderColor: '#111' }}
+              >
+                Enter Roblox Game
               </a>
             </div>
           </div>

@@ -3,10 +3,10 @@ import { X, ChevronLeft, ChevronRight } from 'lucide-react';
 import './PromoBar.css';
 
 const promos = [
-  '🎮 Gathering on Roblox & Discord Server · Sunday Prayer Service at 3:00 PM IST',
-  '💬 Join our Active Discord Server for 24/7 Fellowship, Prayer & Announcements',
-  '✝ Renewed Vision Church Community · Preaching the Gospel & Transforming Lives in the Metaverse',
-  '🌍 Supporting Small Churches Worldwide & Orphanages Through Our Benevolence Fund',
+  { text: '🎮 Gathering on Roblox & Discord Server · Sunday Prayer Service at 3:00 PM IST', link: 'https://www.roblox.com/games/87206202638986' },
+  { text: '💬 Join our Official Discord Server for 24/7 Fellowship, Prayer & Announcements', link: 'https://discord.gg/Un68FwruM' },
+  { text: '✝ Renewed Vision Church Community · Preaching the Gospel & Transforming Lives in the Metaverse', link: '#about' },
+  { text: '🌍 Supporting Small Churches Worldwide & Orphanages Through Our Benevolence Fund', link: '#about' },
 ];
 
 export default function PromoBar() {
@@ -18,12 +18,22 @@ export default function PromoBar() {
   const prev = () => setIndex((i) => (i - 1 + promos.length) % promos.length);
   const next = () => setIndex((i) => (i + 1) % promos.length);
 
+  const current = promos[index];
+
   return (
     <div className="promo-bar">
       <button className="promo-bar__nav" onClick={prev} aria-label="Previous">
         <ChevronLeft size={14} />
       </button>
-      <p className="promo-bar__text">{promos[index]}</p>
+      {current.link.startsWith('http') ? (
+        <a href={current.link} target="_blank" rel="noopener noreferrer" className="promo-bar__text promo-bar__link">
+          {current.text}
+        </a>
+      ) : (
+        <a href={current.link} className="promo-bar__text promo-bar__link">
+          {current.text}
+        </a>
+      )}
       <button className="promo-bar__nav" onClick={next} aria-label="Next">
         <ChevronRight size={14} />
       </button>

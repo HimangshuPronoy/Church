@@ -77,8 +77,9 @@ export default function Navbar() {
           </span>
 
           <a 
-            href="#visit" 
-            onClick={(e) => handleLinkClick(e, 'visit')} 
+            href="https://discord.gg/Un68FwruM" 
+            target="_blank" 
+            rel="noopener noreferrer"
             className="navbar__btn navbar__btn--discord"
             title="Join Our Discord Server"
           >
@@ -87,8 +88,9 @@ export default function Navbar() {
           </a>
 
           <a 
-            href="#visit" 
-            onClick={(e) => handleLinkClick(e, 'visit')} 
+            href="https://www.roblox.com/games/87206202638986" 
+            target="_blank" 
+            rel="noopener noreferrer"
             className="navbar__btn navbar__btn--roblox"
             title="Join Roblox Church Sanctuary"
           >
@@ -126,16 +128,18 @@ export default function Navbar() {
 
           <div className="navbar__mobile-actions">
             <a 
-              href="#visit" 
-              onClick={(e) => handleLinkClick(e, 'visit')} 
+              href="https://discord.gg/Un68FwruM" 
+              target="_blank" 
+              rel="noopener noreferrer"
               className="navbar__btn navbar__btn--discord navbar__btn--full"
             >
               <DiscordIcon />
               <span>Join Discord Server</span>
             </a>
             <a 
-              href="#visit" 
-              onClick={(e) => handleLinkClick(e, 'visit')} 
+              href="https://www.roblox.com/games/87206202638986" 
+              target="_blank" 
+              rel="noopener noreferrer"
               className="navbar__btn navbar__btn--roblox navbar__btn--full"
             >
               <RobloxIcon />

@@ -17,6 +17,17 @@
   font-weight: 400;
 }
 
+.promo-bar__link {
+  color: #fff;
+  text-decoration: none;
+  transition: opacity 0.2s;
+}
+
+.promo-bar__link:hover {
+  opacity: 0.85;
+  text-decoration: underline;
+}
+
 .promo-bar__nav {
   color: #fff;
   opacity: 0.7;

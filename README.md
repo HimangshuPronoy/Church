@@ -9,6 +9,8 @@ A modern, welcoming, and inspiring web application for **Renewed Vision Church C
 - **Mission:** Preaching the Gospel of Jesus Christ, transforming lives, and helping others through benevolence and financial support.
 - **Global Organization:** Active charitable fund providing donations and support to **small churches worldwide** and **orphanages**.
 - **Gathering Place:** **Roblox Church Sanctuary Experience** & **Discord Server**.
+- **Discord Server:** [https://discord.gg/Un68FwruM](https://discord.gg/Un68FwruM)
+- **Roblox Experience:** [https://www.roblox.com/games/87206202638986](https://www.roblox.com/games/87206202638986)
 - **Weekly Service:** **Sunday Prayer Service at 3:00 PM IST** (Roblox 3D Sanctuary & Discord Stage).
 
 ## Features & Structure

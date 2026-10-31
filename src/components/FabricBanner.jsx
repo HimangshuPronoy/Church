@@ -25,18 +25,20 @@ export default function FabricBanner() {
         </p>
         <div className="fabric-banner__actions">
           <a
-            href="#visit"
-            onClick={(e) => handleLinkClick(e, 'visit')}
+            href="https://www.roblox.com/games/87206202638986"
+            target="_blank"
+            rel="noopener noreferrer"
             className="fabric-banner__btn fabric-banner__btn--primary"
           >
-            Join on Roblox &amp; Discord
+            Launch Roblox Sanctuary
           </a>
           <a
-            href="#contact"
-            onClick={(e) => handleLinkClick(e, 'contact')}
+            href="https://discord.gg/Un68FwruM"
+            target="_blank"
+            rel="noopener noreferrer"
             className="fabric-banner__btn fabric-banner__btn--secondary"
           >
-            Connect With Pastors
+            Join Discord Server
           </a>
         </div>
       </div>

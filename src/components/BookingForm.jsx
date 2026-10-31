@@ -54,7 +54,7 @@ export default function BookingForm() {
           
           <div className="booking__quick-links">
             <a
-              href="https://discord.com"
+              href="https://discord.gg/Un68FwruM"
               target="_blank"
               rel="noopener noreferrer"
               className="booking__hub-btn booking__hub-btn--discord"
@@ -68,7 +68,7 @@ export default function BookingForm() {
             </a>
 
             <a
-              href="https://www.roblox.com"
+              href="https://www.roblox.com/games/87206202638986"
               target="_blank"
               rel="noopener noreferrer"
               className="booking__hub-btn booking__hub-btn--roblox"
@@ -130,13 +130,22 @@ export default function BookingForm() {
 
               <div className="booking__success-actions">
                 <a
-                  href="https://discord.com"
+                  href="https://discord.gg/Un68FwruM"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="booking__hub-btn booking__hub-btn--discord"
                 >
                   <DiscordIcon size={18} />
                   <span>Open Discord Server</span>
+                </a>
+                <a
+                  href="https://www.roblox.com/games/87206202638986"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="booking__hub-btn booking__hub-btn--roblox"
+                >
+                  <RobloxIcon size={18} />
+                  <span>Enter Roblox Sanctuary</span>
                 </a>
                 <button
                   type="button"

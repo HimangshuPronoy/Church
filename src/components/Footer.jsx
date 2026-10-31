@@ -45,14 +45,22 @@ const footerLinks = {
 };
 
 export default function Footer() {
-  const handleLinkClick = (e, targetId) => {
+  const handleLinkClick = (e, link) => {
+    if (link === 'Join Official Discord Server') {
+      e.preventDefault();
+      window.open('https://discord.gg/Un68FwruM', '_blank');
+      return;
+    }
+    if (link === 'Enter Roblox Church Game' || link === 'Roblox 3D Sanctuary Experience') {
+      e.preventDefault();
+      window.open('https://www.roblox.com/games/87206202638986', '_blank');
+      return;
+    }
     e.preventDefault();
-    if (targetId) {
-      const el = document.getElementById(targetId);
-      if (el) {
-        el.scrollIntoView({ behavior: 'smooth' });
-        return;
-      }
+    const el = document.getElementById('visit');
+    if (el) {
+      el.scrollIntoView({ behavior: 'smooth' });
+      return;
     }
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
@@ -79,10 +87,10 @@ export default function Footer() {
             <p style={{ marginTop: '4px' }}><strong>Email:</strong> welcome@renewedvisionchurch.org</p>
           </div>
           <div className="footer__socials">
-            <a href="https://discord.com" target="_blank" rel="noopener noreferrer" aria-label="Discord Server" className="footer__social-link" title="Discord Server">
+            <a href="https://discord.gg/Un68FwruM" target="_blank" rel="noopener noreferrer" aria-label="Discord Server" className="footer__social-link" title="Discord Server">
               <DiscordIcon size={18} />
             </a>
-            <a href="https://www.roblox.com" target="_blank" rel="noopener noreferrer" aria-label="Roblox Sanctuary" className="footer__social-link" title="Roblox Church">
+            <a href="https://www.roblox.com/games/87206202638986" target="_blank" rel="noopener noreferrer" aria-label="Roblox Sanctuary" className="footer__social-link" title="Roblox Church Sanctuary">
               <RobloxIcon size={18} />
             </a>
             <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" aria-label="YouTube" className="footer__social-link" title="YouTube">
@@ -102,7 +110,7 @@ export default function Footer() {
                 <li key={link}>
                   <a
                     href="#visit"
-                    onClick={(e) => handleLinkClick(e, 'visit')}
+                    onClick={(e) => handleLinkClick(e, link)}
                     className="footer__link"
                   >
                     {link}
